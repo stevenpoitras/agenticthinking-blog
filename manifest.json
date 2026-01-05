@@ -1,5 +1,11 @@
 {
- "name": "Eduardo Bouças",
+ "name": "Agentic Thinking",
+ "short_name": "Agentic",
+ "description": "AI, enterprise transformation & the future of work by Steven Poitras",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#000000",
  "icons": [
   {
    "src": "\/assets\/icons\/android-icon-36x36.png",

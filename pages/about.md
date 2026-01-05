@@ -3,18 +3,18 @@ layout: about
 permalink: /about/index.html
 ---
 
-Hello, fellow passenger of this incredible ride that is web development. I've been building websites since the turn of the century — I like to think that I've got the hang of it, but the content published here will most certainly indicate otherwise. You're reading *Build Times*, my modest collection of thoughts, experiments, ramblings and rants about the daily goings-on of an individual who gets paid to write gibberish at the computer — these posts are on the house, though.
+Hey there! I'm Steven Poitras, a technology industry veteran with a track record of joining early-stage companies and helping them scale to massive success. I'm currently at [Ema](https://ema.co), where I'm focused on building the future of enterprise AI through agentic AI employees.
 
-I'm a Distinguished Engineer at [Netlify](https://netlify.com) and I maintain several [open-source projects](https://github.com/eduardoboucas). I also [tweet](https://twitter.com/eduardoboucas), [post](https://bsky.app/profile/eduardoboucas.com), and occasionally [speak](https://speakerdeck.com/eduardoboucas).
+Before Ema, I spent nearly a decade at [Nutanix](https://nutanix.com) where I was part of the journey from scrappy startup to $5B+ public company. I created the "Nutanix Bible"—an industry-defining technical resource that became the go-to guide for hyperconverged infrastructure. I then joined [DevRev](https://devrev.ai) to continue working with visionary founders on next-generation developer and customer relationship tools.
 
-Thanks for dropping by. <!--tomb-->
+I write about agentic AI, enterprise transformation, and the patterns I've observed across multiple platform shifts. This site is my space to think out loud about where technology is headed and what it means for how we work.
 
-*– Eduardo*
+Thanks for stopping by. <!--tomb-->
+
+*– Steven*
 
 ### Colophon
 
-This site is built with [Eleventy](https://11ty.dev) and hosted on [Netlify](https://netlify.com). The source code is [publicly available](https://github.com/eduardoboucas/buildtimes).
+This site is built with [Eleventy](https://11ty.dev) and hosted on [Netlify](https://netlify.com). 
 
-The typography consists of [Playfair Display](https://fonts.google.com/specimen/Playfair+Display), [Alternate Gothic W01 No. 3](https://www.onlinewebfonts.com/package/AlternateGothicW01-No3), Helvetica, and Times.
-
-The [masthead illustration](/assets/images/masthead-logo-large.png) is an original piece by Faizal Ganee.
+Connect with me on [LinkedIn](https://linkedin.com/in/stevenpoitras) or learn more about [Ema](https://ema.co).
