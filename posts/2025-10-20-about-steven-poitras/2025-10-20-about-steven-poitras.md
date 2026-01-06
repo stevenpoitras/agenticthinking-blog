@@ -1,7 +1,7 @@
 ---
-permalink: "/blog/{{ page.date | date: '%Y/%m/%d' }}/about-steven-poitras.html"
 layout: post
 title: "About Me: From Consulting to Startup Builder"
+date: 2025-10-20
 tags:
   - blog
   - personal

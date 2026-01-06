@@ -1,7 +1,7 @@
 ---
-permalink: "/blog/{{ page.date | date: '%Y/%m/%d' }}/ema-founding-team.html"
 layout: post
 title: "Meet Ema's Founding Team: Google, Coinbase, and Meta DNA"
+date: 2025-11-10
 tags:
   - blog
   - ema

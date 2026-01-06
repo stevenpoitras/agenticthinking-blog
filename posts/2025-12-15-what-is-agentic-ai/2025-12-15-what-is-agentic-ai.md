@@ -1,7 +1,7 @@
 ---
-permalink: "/blog/{{ page.date | date: '%Y/%m/%d' }}/what-is-agentic-ai.html"
 layout: post
 title: "What is Agentic AI? The Evolution from Chatbots to Autonomous Employees"
+date: 2025-12-15
 tags:
   - blog
   - agentic-ai

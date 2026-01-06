@@ -1,7 +1,7 @@
 ---
-permalink: "/blog/{{ page.date | date: '%Y/%m/%d' }}/mcp-server-unified-sdk.html"
 layout: post
 title: "From Point-Solution to Unified Platform with MCP"
+date: 2026-01-06
 tags:
   - blog
   - mcp
@@ -302,5 +302,20 @@ If you're building AI-integrated systems, I'd encourage you to think about MCP n
 
 ---
 
-*The Ema MCP Toolkit is used internally to manage AI Employee synchronization across environments. The code examples in this post are drawn from the actual implementation.*<!--tomb-->
+*The Ema MCP Toolkit is used internally to manage AI Employee synchronization across environments. The code examples in this post are drawn from the actual implementation.*
+
+---
+
+## What's Next: From Sync to Builder
+
+This post covered the infrastructure foundation—how MCP provides a structured interface layer for AI assistants to interact with platform capabilities. But there's a gap between **knowing what exists** and **knowing how to build**.
+
+In [Part 2: Building a Knowledge-First AI Builder with MCP](/blog/mcp-knowledge-first-builder/), I explore how we evolved from sync tools to an intelligent builder assistant by embedding domain expertise directly into MCP:
+
+- **Agent catalogs:** 40+ agents with inputs, outputs, and critical rules
+- **Workflow patterns:** Common architectures as reusable templates
+- **Validation as knowledge:** Encoding tribal wisdom ("every categorizer needs a Fallback") into executable checks
+- **IDE integration:** Making Cursor platform-aware through MCP-backed rules
+
+The insight: MCP isn't just for actions—it's for expertise.<!--tomb-->
 

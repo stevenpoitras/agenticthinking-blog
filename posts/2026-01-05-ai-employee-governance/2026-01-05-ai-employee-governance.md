@@ -1,7 +1,7 @@
 ---
-permalink: "/blog/{{ page.date | date: '%Y/%m/%d' }}/ai-employee-governance.html"
 layout: post
 title: "The New Hire Who Never Sleeps"
+date: 2026-01-05
 tags:
   - blog
   - agentic-ai

@@ -1,7 +1,7 @@
 ---
-permalink: "/blog/{{ page.date | date: '%Y/%m/%d' }}/ema-platform-overview.html"
 layout: post
 title: "Ema: The Universal AI Employee Platform"
+date: 2025-11-20
 tags:
   - blog
   - ema

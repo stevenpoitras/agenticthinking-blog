@@ -1,7 +1,7 @@
 ---
-permalink: "/blog/{{ page.date | date: '%Y/%m/%d' }}/ema-user-guide.html"
 layout: post
 title: "Ema Platform: A Complete Guide to Agentic AI Concepts"
+date: 2025-12-01
 tags:
   - blog
   - ema

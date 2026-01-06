@@ -1,7 +1,8 @@
 ---
-permalink: "/blog/{{ page.date | date: '%Y/%m/%d' }}/why-i-joined-ema.html"
 layout: post
 title: "Why I Joined Ema: Betting on Agentic AI"
+date: 2025-11-01
+featured: true
 tags:
   - blog
   - ema

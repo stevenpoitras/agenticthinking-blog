@@ -38,7 +38,29 @@ module.exports = eleventyConfig => {
 
         return true;
       })
-      .reverse();
+      .reverse()
+      .sort((a, b) => {
+        // Sort by: featured first, then by weight (lower = higher priority), then by date
+        const aFeatured = a.data.featured ? 1 : 0;
+        const bFeatured = b.data.featured ? 1 : 0;
+        
+        // Featured posts come first
+        if (bFeatured !== aFeatured) {
+          return bFeatured - aFeatured;
+        }
+        
+        // Then sort by weight (lower weight = higher priority)
+        // Default weight is 100 if not specified
+        const aWeight = a.data.weight ?? 100;
+        const bWeight = b.data.weight ?? 100;
+        
+        if (aWeight !== bWeight) {
+          return aWeight - bWeight;
+        }
+        
+        // Finally, maintain date order (already reversed above, so newest first)
+        return 0;
+      });
 
     const internalPosts = posts.filter(post => post.data.layout === "post");
 
@@ -59,6 +81,19 @@ module.exports = eleventyConfig => {
     });
 
     return posts;
+  });
+
+  // Featured posts collection (for "Featured" sections)
+  eleventyConfig.addCollection("featured", collection => {
+    return collection
+      .getAllSorted()
+      .filter(item => item.data.featured && item.data.tags?.includes("blog"))
+      .reverse()
+      .sort((a, b) => {
+        const aWeight = a.data.weight ?? 100;
+        const bWeight = b.data.weight ?? 100;
+        return aWeight - bWeight;
+      });
   });
 
   eleventyConfig.addCollection("series", collection => {
