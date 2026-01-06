@@ -165,12 +165,16 @@ Ema offers AI employees across multiple enterprise functions:
 
 ## Strategic Partnerships
 
-Ema has established partnerships with industry leaders:
-- Microsoft
-- Wipro
-- Hitachi Digital Services
-- ISG
-- NDI
+Ema has established partnerships with industry leaders to accelerate enterprise AI adoption:
+
+| Partner | Partnership Focus |
+|---------|-------------------|
+| **Microsoft** | Pegasus program member—co-selling and technology collaboration |
+| **Wipro** | Wipro Ventures portfolio company; co-selling agentic AI solutions |
+| **Hitachi Digital Services** | Strategic co-selling partnership |
+| **Workday Ventures** | Partner company for HR and workforce automation |
+| **ISG** | Enterprise AI advisory and implementation |
+| **Teleperformance (TP)** | Customer experience and back-office AI integration |
 
 ---
 
