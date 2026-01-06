@@ -5,6 +5,8 @@ node_modules/
 CNAME
 **/.DS_Store
 .twitter-cache.json
+.refs/
+.drafts/
 
 # Local Netlify folder
 .netlify

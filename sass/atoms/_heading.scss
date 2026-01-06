@@ -40,6 +40,32 @@
   }
 }
 
+@mixin heading4() {
+  font-family: $font-family-secondary;
+  font-size: 22px;
+  line-height: 1.3;
+  position: relative;
+
+  @include heading-anchor();
+  
+  @include media(">=medium") {
+    font-size: 28px;
+  }
+}
+
+@mixin heading5() {
+  font-family: $font-family-secondary;
+  font-size: 18px;
+  line-height: 1.3;
+  position: relative;
+
+  @include heading-anchor();
+  
+  @include media(">=medium") {
+    font-size: 22px;
+  }
+}
+
 .heading-2 {
   @include heading2;
 }

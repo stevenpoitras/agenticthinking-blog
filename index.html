@@ -53,6 +53,7 @@ permalink: "{% if pagination.pageNumber == 0 %}index.html{% else %}page/{{ pagin
   </div>
 </main>
 
+{% if pagination.nextPageLink %}
 <div class="js-paginator paginator">
   <div class="paginator__inner">
     <div class="paginator__button-wrapper">
@@ -64,3 +65,4 @@ permalink: "{% if pagination.pageNumber == 0 %}index.html{% else %}page/{{ pagin
     </div>
   </div>
 </div>
+{% endif %}

@@ -107,6 +107,22 @@
     margin-bottom: $post-vertical-rythm * 0.6;
   }
 
+  h4 {
+    @include heading4;
+    @include constrain($post-body-max-width, true);
+
+    margin-top: $post-vertical-rythm * 1.5;
+    margin-bottom: $post-vertical-rythm * 0.5;
+  }
+
+  h5 {
+    @include heading5;
+    @include constrain($post-body-max-width, true);
+
+    margin-top: $post-vertical-rythm * 1.2;
+    margin-bottom: $post-vertical-rythm * 0.4;
+  }
+
   a {
     @include link(true);
   }
