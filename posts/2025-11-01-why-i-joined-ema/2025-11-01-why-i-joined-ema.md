@@ -77,6 +77,43 @@ Ema's approach represents a genuinely differentiated approach to AI in the enter
 - Genuine technical innovation, not marketing hype
 - Solves real enterprise problems with production-ready solutions
 
+---
+
+## 📞 Try It Yourself: Talk to an AI Employee
+
+Don't just take my word for it—**experience Ema firsthand**. Call our demo voice agent and see what agentic AI feels like in action.
+
+> **Call Now: [+1 (650) 300-3241](tel:+16503003241)**
+
+### What to Try
+
+**Basic Interactions:**
+- *"What can you help me with?"*
+- *"Tell me about Ema's technology"*
+- *"What is agentic AI?"*
+
+**Multi-Language Support:**
+- Try switching languages mid-conversation: *"Can you speak Spanish?"* or *"Parlez-vous français?"*
+- Ask questions in different languages and watch it seamlessly adapt
+
+**Email Integration:**
+- *"Can you send me a summary of this conversation by email?"*
+- *"Email me more information about Ema"*
+
+**Advanced Features:**
+- Ask complex, multi-part questions and see how it handles context
+- Try interrupting mid-sentence—it handles natural conversation flow
+- Ask follow-up questions to test conversation memory
+
+**Fun Things to Explore:**
+- *"What makes you different from a chatbot?"*
+- *"How do you handle tasks that require multiple steps?"*
+- *"Can you explain your technology stack?"*
+
+> 💡 **Pro tip:** This is a real AI Employee—not a scripted IVR or basic chatbot. It's the same technology that powers enterprise deployments handling millions of interactions.
+
+---
+
 ## What This Is NOT About
 
 **Important context:**

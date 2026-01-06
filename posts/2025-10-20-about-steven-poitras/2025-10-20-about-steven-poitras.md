@@ -1,7 +1,7 @@
 ---
 permalink: "/blog/{{ page.date | date: '%Y/%m/%d' }}/about-steven-poitras.html"
 layout: post
-title: "About Me: From Childhood Phreaking to Startup Builder"
+title: "About Me: From Consulting to Startup Builder"
 tags:
   - blog
   - personal
@@ -13,7 +13,33 @@ tags:
 
 I'm a technology industry veteran with a pattern of joining early-stage companies and helping them scale to massive success. Here's my story and what drives me.<!--more-->
 
+## Early Beginnings: A Hacker at Heart
+
+My fascination with technology started long before I understood what a career in tech could look like. As a kid, I was drawn to understanding how systems worked—and more importantly, how to bend them to my will.
+
+### Phreaking and Hacking
+
+Before the internet was mainstream, I discovered the world of phreaking and hacking. There was something intoxicating about exploring systems, understanding their weaknesses, and finding paths where none were supposed to exist. The curiosity wasn't malicious—it was pure exploration, the same drive that makes engineers want to take things apart to see how they tick.
+
+### My First "Hack" - 3rd Grade
+
+My first real "hack" happened in 3rd grade. Using a school computer, I managed to get access to look up information on two topics that fascinated my young mind: **Area 51** and **Pamela Anderson**. Looking back, it's a hilarious combination of childhood curiosity—government conspiracy theories and pop culture crushes. But it was formative. That moment of bypassing restrictions and accessing forbidden knowledge lit a fire that never went out. I realized that with enough curiosity and persistence, systems could be understood and navigated.
+
+This early experience shaped how I approach technology to this day: with curiosity, a healthy disregard for "you can't do that," and an understanding that the most interesting things often lie just beyond the obvious paths.
+
 ## Career Timeline
+
+### Accenture - Consulting & R&D Foundation
+**Role:** Technology Consultant
+
+Before joining the startup world, I cut my teeth at Accenture—one of the world's largest consulting firms. This experience was foundational in ways I didn't fully appreciate until later:
+
+- **Partner Perspective:** Working as a consultant, I learned to see technology from the *partner's* perspective rather than the *vendor's* perspective. This distinction is crucial. Vendors think about features and roadmaps. Partners think about business outcomes, integration challenges, and real-world deployment realities. This lens has been invaluable throughout my career.
+- **R&D Exposure:** Got hands-on experience with emerging technologies before they hit mainstream enterprise adoption
+- **Enterprise DNA:** Learned how large organizations actually make technology decisions—the politics, the procurement processes, the stakeholder management
+- **Problem-Solving Framework:** Developed a structured approach to understanding complex business problems and translating them into technology solutions
+
+This consulting foundation gave me a unique vantage point when I later moved to vendor-side roles. I could anticipate customer concerns, speak their language, and understand what really mattered to them beyond the feature checklist.
 
 ### Nutanix (2011-2020)
 **Role:** Principal Architect & Technical Marketing Lead
