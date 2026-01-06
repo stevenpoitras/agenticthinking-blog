@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why I Joined Ema: Betting on Agentic AI"
-date: 2025-11-01
+date: 2025-12-08
 featured: true
 tags:
   - blog
@@ -114,14 +114,6 @@ Don't just take my word for it—**experience Ema firsthand**. Call our demo voi
 > 💡 **Pro tip:** This is a real AI Employee—not a scripted IVR or basic chatbot. It's the same technology that powers enterprise deployments handling millions of interactions.
 
 ---
-
-## What This Is NOT About
-
-**Important context:**
-- This is NOT about anything negative at previous employers
-- This is about running TOWARD an opportunity, not away from anything
-- I maintain positive relationships with my professional network
-- Career moves are about finding the right fit at the right time
 
 ## The Bottom Line
 
