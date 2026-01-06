@@ -1,8 +1,10 @@
 name: Build and Deploy to GitHub Pages
 
 on:
+  # Auto-deploy on push to master or main
   push:
-    branches: [main]
+    branches: [master, main]
+  # Manual trigger from GitHub Actions UI
   workflow_dispatch:
 
 permissions:

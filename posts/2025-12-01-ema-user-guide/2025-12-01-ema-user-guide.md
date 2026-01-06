@@ -76,6 +76,50 @@ A workflow is a **directed acyclic graph (DAG)** where:
 
 **1. Trigger Agents** — Start the workflow when an event occurs (chat message, email, voice call, schedule)
 
+**Trigger Output Details:**
+
+| Output | Description |
+|--------|-------------|
+| `user_query` | The **last/most recent user question** only. Use this when you only need the current request without history context. |
+| `chat_conversation` | The **complete conversation history** including all previous messages. Contains the full context of the interaction. |
+| `additional_context` | **Integration-specific context** passed from upstream systems via API (Microsoft Teams, Slack, etc.). |
+
+**Additional Context from Integrations:**
+
+When integrated with upstream platforms, triggers may receive platform-specific information:
+
+| Integration | Context May Include |
+|-------------|---------------------|
+| **Microsoft Teams** (Graph API) | User profile, team/channel info, tenant details |
+| **Slack** | Workspace info, channel context, thread information |
+| **Email** | Sender info, headers, attachments metadata |
+| **Custom API** | Any context your integration passes through |
+
+> ⚠️ **Critical: Workflow Execution Model**
+>
+> Each `user_query` **triggers a new workflow execution**. This means:
+> - The workflow runs **once per user message**, not once per conversation
+> - Each subsequent question invokes the workflow again
+> - Design workflows to check context before performing actions (e.g., don't create duplicate tickets)
+>
+> **Anti-Pattern:**
+> ```
+> User: "Create a ticket for my laptop"  → Creates ticket ✓
+> User: "Add my phone number to it"      → Creates ANOTHER ticket ✗
+> ```
+>
+> **Correct Pattern:** Check `chat_conversation` to detect if a ticket was already created, then route to "update ticket" instead.
+
+**Trigger Outputs vs Conversation Summarizer:**
+
+| Approach | History Scope | Use Case |
+|----------|---------------|----------|
+| `chat_conversation` | **All history** | Need full context |
+| `user_query` | **Last message only** | Simple queries |
+| **Conversation Summarizer** | **Configurable** | Manage token limits |
+
+> **Note:** You may still need Conversation Summarizer with `chat_conversation` because some agents require its output format, or to reduce conversation size for LLM context limits.
+
 **2. Classification Agents** — Categorize inputs to route to appropriate handlers
 
 **3. Search Agents** — Retrieve relevant information from knowledge bases
@@ -179,6 +223,12 @@ A workflow pattern where human approval is required before proceeding.
 | **Context Needed** | No history required | History important |
 | **Use Case** | Document processing, batch jobs | Chat, voice support |
 | **Example** | "Process this invoice" | "What's my leave balance?" → "Apply for Monday" |
+
+**Accessing Conversation Data in Workflows:**
+
+- `{{trigger.user_query}}` — Returns only the **last/current user message**
+- `{{trigger.chat_conversation}}` — Returns the **complete conversation history**
+- **Conversation Summarizer agent** — Allows **configurable history depth**
 
 ## Practical Examples
 

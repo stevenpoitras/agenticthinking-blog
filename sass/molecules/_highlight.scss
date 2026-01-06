@@ -27,3 +27,33 @@ pre[class^="language-"] {
     display: none;
   }
 }
+
+// Plain code blocks without language class
+pre:not([class]) {
+  padding: 40px 0;
+  font-family: $font-family-monospace;
+  font-size: 14px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
+  line-height: 1.4;
+
+  @include media(">=medium") {
+    font-size: 16px;
+  }
+
+  code {
+    @include constrain;
+
+    display: inline-block;
+    background-color: $colour-light-grey;
+    padding: 30px 40px;
+    text-align: left;
+    white-space: pre;
+    border-radius: 4px;
+
+    @include media(">=medium") {
+      min-width: 600px;
+    }
+  }
+}

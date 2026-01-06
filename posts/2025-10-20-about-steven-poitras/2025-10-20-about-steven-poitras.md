@@ -1,7 +1,7 @@
 ---
 permalink: "/blog/{{ page.date | date: '%Y/%m/%d' }}/about-steven-poitras.html"
 layout: post
-title: "About Me: From Nutanix to Ema"
+title: "About Me: From Childhood Phreaking to Startup Builder"
 tags:
   - blog
   - personal
