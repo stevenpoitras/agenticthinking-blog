@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building a Knowledge-First AI Builder with MCP"
+title: "MCP in Practice: Knowledge-First Builder"
 date: 2026-01-06
 tags:
   - blog

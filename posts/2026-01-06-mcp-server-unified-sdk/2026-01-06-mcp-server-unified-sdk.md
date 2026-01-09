@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "From Point-Solution to Unified Platform with MCP"
+title: "MCP in Practice: From Scripts to Platform"
 date: 2026-01-06
 tags:
   - blog
@@ -38,53 +38,13 @@ MCP—the Model Context Protocol—offered exactly this. Unlike embedding logic 
 
 The question shifted from "how do I write another script" to **"how do I define the capabilities of this system in a way that's reusable?"**
 
-## MCP Concepts (Ground Truth, No Fluff)
+## MCP in Brief
 
-Let me explain the MCP concepts as I came to understand them through building:
+MCP provides three primitives: **Tools** (actions with typed inputs/outputs), **Resources** (static context), and **Prompts** (interaction templates). For a complete mental model of MCP's primitives and when to use each, see [The MCP Mental Model](/blog/mcp-mental-model/).
 
-### MCP Server
-
-An MCP server is a process that exposes capabilities via a standardized protocol. Think of it as an API, but specifically designed for model consumption. Clients connect (often via stdio for local tools), request available tools, and invoke them. The server handles the translation between structured requests and actual system behavior.
-
-**When to use it:** When you want AI assistants to interact with your system without teaching them about HTTP endpoints, auth flows, or API quirks.
-
-**When NOT to use it:** When your use case is single-shot with no need for context reuse—overhead exceeds benefit.
-
-### Tools
-
-Tools are the workhorse. They're functions with typed inputs and outputs that perform actions or retrieve information. In my implementation, I defined tools like `list_ai_employees`, `sync_persona`, `compare_ai_employees`, and `get_sync_tag`.
-
-**Key distinction from "just an API":** Tools include descriptions that teach models *when and why* to use them, not just how. The description for `sync_persona` explains what sync tags are and why fingerprint matching matters—context that an API spec wouldn't provide.
-
-### Resources
-
-Resources represent static or semi-static context: documentation, current configuration, reference data. I considered exposing environment definitions and sync options as resources but ultimately chose tools instead—the data was dynamic enough that tool invocation fit better.
-
-**When to use:** Reference material that rarely changes but needs to be inspectable.
-
-### Prompts
-
-Predefined prompts can guide common interaction patterns. I haven't heavily used this feature yet, but I can see value in defining prompts like "sync-all-from-master" that chain multiple tool calls in a validated sequence.
-
-### Context Boundaries
-
-This is the subtle one. MCP forces you to define what's **inside the boundary** (accessible to the model) and what stays **outside** (implementation details). In my system, the boundary includes:
-
-- Available environments and their names
-- AI Employee metadata (IDs, names, fingerprints, sync status)
-- Tool operations (sync, compare, search)
-
-But **not**:
-
-- Raw API responses with internal fields
-- Bearer tokens or auth details
-- Database internals
+What matters for this story: MCP gave me a way to define capabilities once and share them everywhere. The protocol forces you to draw clear boundaries—what's accessible to the model versus what stays hidden as implementation details. In my system, the boundary includes environment names, persona metadata, and sync operations. It excludes raw API responses, bearer tokens, and database internals.
 
 > **Lesson:** Drawing this boundary well is half the work. Too porous and you leak complexity; too restrictive and the model can't do useful work.
-
-### How MCP Differs from "Just RAG" or "Just Tools"
-
-RAG retrieves chunks of text to inform responses. Tools execute actions. MCP is neither—it's a **capability layer** that says "here's what this system can do, here's how to invoke it, and here's enough context to use it intelligently." It's the difference between giving someone a pile of documents versus giving them access to the librarian.
 
 ## From Point Solution to Platform
 
@@ -239,21 +199,9 @@ return crypto.createHash("sha256")
 
 Syncs only occur when fingerprints differ—no-change syncs are skipped automatically.
 
-## When MCP is the Right Tool (and When It Isn't)
+## Why MCP Was Right for This
 
-### Use MCP When:
-
-- **Multiple consumers need shared context:** AI assistants, CLI tools, schedulers all accessing the same capabilities
-- **Definitions must stay consistent:** Tool behavior should be the same regardless of how it's invoked
-- **Tooling must be centrally governed:** Changes to capability definitions propagate to all consumers
-
-### Do NOT Use MCP When:
-
-- **The problem is single-shot:** If you're building a one-off script, MCP overhead isn't worth it
-- **Context is purely local:** If only one consumer ever needs the capability, a direct function call is simpler
-- **You're optimizing for raw performance:** MCP adds a protocol layer; for microsecond-sensitive paths, it's overhead
-
-In my case, MCP was right because I had multiple consumers (AI assistants, future CLI, potential webhook-triggered syncs) and I wanted capability definitions to be the source of truth.
+MCP was the right choice because I had multiple consumers (AI assistants, future CLI, potential webhook-triggered syncs) and I wanted capability definitions to be the source of truth. For a complete decision framework on when MCP is worth the overhead—and when it isn't—see [The MCP Mental Model](/blog/mcp-mental-model/).
 
 ## What Changed After MCP
 
