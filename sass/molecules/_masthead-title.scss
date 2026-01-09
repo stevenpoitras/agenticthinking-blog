@@ -5,7 +5,7 @@
   flex-wrap: nowrap;
   font-family: $font-family-brand;
   font-weight: $font-weight-ultra-bold;
-  font-size: 8.5vw;
+  font-size: clamp(32px, 8.5vw, 105px);
   margin: 20px 0 15px 0;
   white-space: nowrap;
   width: 100%;
